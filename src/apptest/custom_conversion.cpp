@@ -35,21 +35,13 @@ class customer {
       : customer_id_(i), name_(n), late_(l), position_(p) {
   }
 
-  std::uint64_t customer_id() const { 
-    return customer_id_; 
-  }
+  std::uint64_t customer_id() const { return customer_id_; }
 
-  const std::string& name() const { 
-    return name_;
-  }
+  const std::string& name() const { return name_; }
 
-  bool late() const { 
-    return late_;
-  }
+  bool late() const { return late_; }
 
-  const vec3& position() const { 
-    return position_;
-  }
+  const vec3& position() const { return position_; }
 
  private:
   std::uint64_t customer_id_;

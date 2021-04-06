@@ -21,9 +21,11 @@ int main(int argc, char* argv[]) {
   std::cout << jv1.as_string() << std::endl;
 
   int64_t& num = jv2.emplace_int64();
+
   num = 1;
   assert(jv2.is_int64());
   std::cout << jv2.as_int64() << std::endl;
+
   num = 2;
   std::cout << jv2.as_int64() << std::endl;
 
