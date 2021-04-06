@@ -33,12 +33,12 @@ class customer {
  public:
   explicit customer(std::uint64_t i, const std::string& n, bool l,
                     const vec3& p)
-      : customer_id_(i), name_(n), late_(l), position_(p) {
+      : customer_id_(i), customer_name_(n), late_(l), position_(p) {
   }
 
   std::uint64_t customer_id() const { return customer_id_; }
 
-  const std::string& name() const { return name_; }
+  const std::string& customer_name() const { return customer_name_; }
 
   bool late() const { return late_; }
 
@@ -47,7 +47,7 @@ class customer {
  private:
   std::uint64_t customer_id_;
 
-  std::string name_;
+  std::string customer_name_;
 
   bool late_;
 
@@ -57,7 +57,7 @@ class customer {
 void tag_invoke(const bj::value_from_tag&, bj::value& jv, customer co) {
   jv = {
     {"id", co.customer_id()},
-    {"name", co.name()},
+    {"name", co.customer_name()},
     {"late", co.late()},
     {"position", co.position()}
   };
@@ -86,7 +86,7 @@ int main() {
 
   customer cus2 = bj::value_to<customer>(jv);
 
-  assert(cus.name() == cus2.name());
+  assert(cus.customer_name() == cus2.customer_name());
 
   std::cout << "Hello, world!" << std::endl;
 
