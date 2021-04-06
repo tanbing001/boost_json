@@ -31,7 +31,8 @@ vec3 tag_invoke(const bj::value_to_tag<vec3>&, const bj::value& jv) {
 
 class customer {
  public:
-  customer(std::uint64_t i, const std::string& n, bool l, const vec3& p)
+  explicit customer(std::uint64_t i, const std::string& n, bool l,
+                    const vec3& p)
       : customer_id_(i), name_(n), late_(l), position_(p) {
   }
 
