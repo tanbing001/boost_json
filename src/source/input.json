@@ -1,0 +1,22 @@
+{
+    "name": "feiyue",
+    "level": 99,
+    "age": 18,
+    "member": [
+        {
+            "id": 1,
+            "name": "tom",
+            "damage": "123"
+        },
+        {
+            "id": 2,
+            "name": "jack",
+            "damage": "182"
+        },
+        {
+            "id": 3,
+            "name": "rose",
+            "damage": "89"
+        }
+    ]
+}

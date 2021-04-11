@@ -9,6 +9,7 @@ set(TARGETS
 	conversion
 	custom_conversion
 	initialize_list
+	file_operation
 )
 
 foreach(name ${TARGETS})
